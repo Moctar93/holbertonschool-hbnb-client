@@ -1,28 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="EN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>List of Places</title>
+    <title>List of Location</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <nav>
-            <a href="login.html" id="login-link">Login</a>
+            <a href="index.html">
+                <img src="logo.png" alt="Logo de l'Application" class="logo">
+            </a>
+            <a href="login.html" class="login-button">Login</a>
         </nav>
     </header>
     <main>
         <section id="filter">
+            <h2>Available Places</h2>
             <label for="country-filter">Filter by Country:</label>
             <select id="country-filter">
-                <!-- Options will be populated dynamically -->
+                <!-- Options de pays -->
+		<option value="all">All country</option>
+                <option value="us">France</option>
+                <option value="canada">United States</option>
+                <!-- Plus d'options ici -->
             </select>
         </section>
-        <section id="places-list">
-            <!-- List of places will be populated dynamically -->
+        <section class="places-container">
+            <!-- Articles des lieux -->
+            <article class="place-card">
+                <img src="beach-house.jpg" alt="Maison de plage" class="place-image">
+                <h2>Beautiful Beach House</h2>
+                <p>Price by night : $150</p>
+                <p>Location : Los Angeles, United States</p>
+                <button class="details-button" onclick="location.href='place.html'">View Details</button>
+            </article>
+            <article class="place-card">
+                <img src="cozy-cabin.jpg" alt="Cabane confortable" class="place-image">
+                <h2>Cozy Cabin</h2>
+                <p>Price by night : $100</p>
+                <p>Location : Toronto, Canada</p>
+                <button class="details-button" onclick="location.href='place.html'">View Details</button>
+            </article>
+            <article class="place-card">
+                <img src="modern-apartment.jpg" alt="Appartement moderne" class="place-image">
+                <h2>Modern Apartment</h2>
+                <p>Price by night : $200</p>
+                <p>Location : New York, United States</p>
+                <button class="details-button" onclick="location.href='place.html'">View Details</button>
+            </article>
+            <!-- Plus de cartes de lieux ici -->
         </section>
     </main>
-    <script src="scripts.js"></script>
+    <footer>
+        <p>© 2024 Allright reserved.</p>
+    </footer>
 </body>
 </html>
+

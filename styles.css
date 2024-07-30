@@ -1,32 +1,209 @@
-/* 
-  This is a SAMPLE File to get you started. Follow the instructions on the project to complete the tasks. 
-  You'll probably need to override some of theese styles.
-*/
-
+/* Reset de base */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* Peut être modifié selon les préférences */
 }
 
+/* Style de base du corps */
 body {
-    background-color: #f4f4f4;
+    background-color: #f4f4f4; /* Palette de couleurs modifiable */
     color: #333;
 }
 
+/* En-tête et navigation */
 header {
     background-color: #333;
     color: #fff;
     padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    width: 150px; /* Ajuster la taille du logo selon les besoins */
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
     margin-left: 1rem;
+    font-weight: bold;
 }
 
-main {
-    padding: 2rem;
+nav a.login-button {
+    background-color: #007BFF;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
 }
+
+/* Section de filtre */
+#filter {
+    margin: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#filter label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+#country-filter {
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Conteneur des lieux */
+.places-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+/* Carte des lieux */
+.place-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 10px;
+    width: 300px; /* Largeur fixe pour les cartes */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.place-card .place-image {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    height: auto;
+}
+
+.place-card h2 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+
+.place-card p {
+    margin: 5px 0;
+}
+
+.details-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.details-button:hover {
+    background-color: #0056b3;
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+    margin-top: 20px;
+}
+
+/* Détails de l'endroit */
+.place-details {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.place-details .place-image-large {
+    width: 100%;
+    border-radius: 10px;
+    height: auto;
+}
+
+.place-info p {
+    margin: 10px 0;
+}
+
+/* Avis */
+.reviews {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.review-card {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.review-card p {
+    margin: 5px 0;
+}
+
+.review-rating {
+    color: #FFD700;
+}
+
+.review-rating .fas {
+    font-size: 1.2rem;
+}
+
+/* Formulaire d'avis */
+.add-review {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#review-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#review-form textarea, #review-form select {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#review-form button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#review-form button:hover {
+    background-color: #0056b3;
+}
+
