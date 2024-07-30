@@ -51,9 +51,7 @@ main {
 
 /* Conteneur des sections Filter by Country et Available Places */
 #filter-container {
-    display: flex;
-    flex-direction: column; /* Colonne pour aligner les éléments */
-    align-items: center; /* Centre horizontalement les éléments */
+    text-align: center; /* Centre le texte */
     margin-bottom: 20px; /* Marge inférieure pour l'espace entre les sections */
 }
 
@@ -65,9 +63,7 @@ main {
 
 /* Style du filtre */
 #filter {
-    display: flex;
-    align-items: center; /* Aligne le texte et le sélecteur verticalement */
-    gap: 10px; /* Espace entre le texte et le sélecteur */
+    display: inline-block; /* Affiche le filtre en ligne avec le texte */
     background-color: transparent; /* Enlève le fond */
     border: none; /* Enlève la bordure */
     box-shadow: none; /* Enlève l'ombre */
@@ -75,6 +71,7 @@ main {
 
 #filter label {
     font-size: 1rem; /* Taille du texte du label */
+    margin-right: 10px; /* Espace entre le label et le sélecteur */
 }
 
 #country-filter {
