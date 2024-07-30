@@ -51,7 +51,9 @@ main {
 
 /* Conteneur des sections Filter by Country et Available Places */
 #filter-container {
-    text-align: center; /* Centre le texte */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre le contenu horizontalement */
     margin-bottom: 20px; /* Marge inférieure pour l'espace entre les sections */
 }
 
@@ -63,7 +65,8 @@ main {
 
 /* Style du filtre */
 #filter {
-    display: inline-block; /* Affiche le filtre en ligne avec le texte */
+    display: flex;
+    align-items: center; /* Aligne le label et le sélecteur sur la même ligne */
     background-color: transparent; /* Enlève le fond */
     border: none; /* Enlève la bordure */
     box-shadow: none; /* Enlève l'ombre */
