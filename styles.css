@@ -20,7 +20,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between; /* Distribue l'espace entre le logo et le login */
-    position: relative;
 }
 
 /* Logo */
@@ -45,21 +44,28 @@ nav a.login-button {
     margin-left: auto; /* Aligne le bouton à l'extrême droite */
 }
 
+/* Conteneur principal */
+main {
+    padding: 2rem;
+}
+
 /* Section de filtre */
 #filter {
     margin: 20px auto; /* Centre horizontalement la section */
     padding: 10px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: transparent; /* Enlève le fond */
+    border: none; /* Enlève la bordure */
+    box-shadow: none; /* Enlève l'ombre */
     max-width: 600px; /* Largeur maximale de la section */
+    text-align: center; /* Centre le texte à l'intérieur */
 }
 
+/* Titre du filtre */
 #filter h2 {
     margin-bottom: 10px;
-    text-align: center; /* Centre le texte du titre */
 }
 
+/* Sélecteur de pays */
 #country-filter {
     padding: 5px;
     margin-top: 10px;
