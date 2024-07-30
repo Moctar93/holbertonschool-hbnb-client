@@ -49,20 +49,28 @@ main {
     padding: 2rem;
 }
 
+/* Conteneur des sections */
+.sections-container {
+    display: flex;
+    justify-content: space-between; /* Espace entre les éléments */
+    align-items: center; /* Aligne verticalement les éléments */
+    margin-bottom: 20px; /* Marge inférieure pour l'espace entre les sections */
+}
+
 /* Section de filtre */
 #filter {
-    margin: 20px auto; /* Centre horizontalement la section */
     padding: 10px;
     background-color: transparent; /* Enlève le fond */
     border: none; /* Enlève la bordure */
     box-shadow: none; /* Enlève l'ombre */
-    max-width: 600px; /* Largeur maximale de la section */
+    max-width: 300px; /* Largeur maximale réduite */
     text-align: center; /* Centre le texte à l'intérieur */
 }
 
 /* Titre du filtre */
 #filter h2 {
     margin-bottom: 10px;
+    font-size: 1rem; /* Réduit la taille de la police */
 }
 
 /* Sélecteur de pays */
@@ -72,15 +80,6 @@ main {
     border-radius: 5px;
     border: 1px solid #ddd;
     width: 100%; /* Occupe toute la largeur disponible du conteneur */
-}
-
-/* Conteneur des lieux */
-.places-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
-    justify-content: center;
 }
 
 /* Carte des lieux */
@@ -99,6 +98,11 @@ main {
     width: 100%;
     border-radius: 10px 10px 0 0;
     height: auto;
+}
+
+/* Enlève les icônes devant les articles */
+.place-card .place-image::before {
+    content: none; /* Supprime les icônes */
 }
 
 .place-card h2 {
