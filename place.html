@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Place Details</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Lien vers Font Awesome pour les étoiles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="Logo de l'application" class="logo">
         <nav>
-            <a href="index.html">Accueil</a>
+            <a href="index.html">
+                <img src="logo.png" alt="Logo of the application" class="logo">
+            </a>
             <a href="login.html" class="login-button">Login</a>
         </nav>
     </header>
@@ -21,19 +21,19 @@
             <h1>Beautiful Beach House</h1>
             <img src="beach-house.jpg" alt="Beautiful Beach House" class="place-image-large">
             <div class="place-info">
-                <p><strong>Hôte:</strong> John Doe</p>
-                <p><strong>Prix:</strong> $150 par nuit</p>
+                <p><strong>Host:</strong> John Doe</p>
+                <p><strong>Price:</strong> $150 per night</p>
                 <p><strong>Location:</strong> Los Angeles, United States</p>
-                <p><strong>Description:</strong> Une magnifique maison de plage avec vue sur l'océan. Idéale pour les vacances en famille ou les escapades romantiques.</p>
-                <p><strong>Équipements:</strong> WiFi, Cuisine, Parking gratuit, Vue sur la mer</p>
+                <p><strong>Description:</strong> A beautiful beach house with ocean view. Perfect for family vacations or romantic getaways.</p>
+                <p><strong>Amenities:</strong> WiFi, Kitchen, Free parking, Sea view</p>
             </div>
         </section>
         <section id="reviews" class="reviews">
-            <h2>Avis</h2>
+            <h2>Reviews</h2>
             <div class="review-card">
-                <p><strong>Utilisateur:</strong> Jane Smith</p>
-                <p><strong>Commentaire:</strong> Excellent endroit, nous avons adoré notre séjour!</p>
-                <p class="review-rating">Évaluation:
+                <p><strong>User:</strong> Jane Smith</p>
+                <p><strong>Comment:</strong> Excellent place, we loved our stay!</p>
+                <p class="review-rating">Rating:
                     <span class="fas fa-star"></span>
                     <span class="fas fa-star"></span>
                     <span class="fas fa-star"></span>
@@ -42,9 +42,9 @@
                 </p>
             </div>
             <div class="review-card">
-                <p><strong>Utilisateur:</strong> Mark Johnson</p>
-                <p><strong>Commentaire:</strong> Très bel endroit, mais un peu bruyant le soir.</p>
-                <p class="review-rating">Évaluation:
+                <p><strong>User:</strong> Mark Johnson</p>
+                <p><strong>Comment:</strong> Very nice place, but a bit noisy at night.</p>
+                <p class="review-rating">Rating:
                     <span class="fas fa-star"></span>
                     <span class="fas fa-star"></span>
                     <span class="fas fa-star"></span>
@@ -54,24 +54,24 @@
             </div>
         </section>
         <section id="add-review" class="add-review">
-            <h2>Ajouter un avis</h2>
+            <h2>Add a Review</h2>
             <form id="review-form">
-                <label for="review-text">Avis:</label>
+                <label for="review-text">Review:</label>
                 <textarea id="review-text" name="review-text" required></textarea>
-                <label for="review-rating">Évaluation:</label>
+                <label for="review-rating">Rating:</label>
                 <select id="review-rating" name="review-rating" required>
-                    <option value="5">5 étoiles</option>
-                    <option value="4">4 étoiles</option>
-                    <option value="3">3 étoiles</option>
-                    <option value="2">2 étoiles</option>
-                    <option value="1">1 étoile</option>
+                    <option value="5">5 stars</option>
+                    <option value="4">4 stars</option>
+                    <option value="3">3 stars</option>
+                    <option value="2">2 stars</option>
+                    <option value="1">1 star</option>
                 </select>
                 <button type="submit">Submit Review</button>
             </form>
         </section>
     </main>
     <footer>
-        2024 All rights reserved.
+        <p>© 2024 All rights reserved.</p>
     </footer>
 </body>
 </html>
