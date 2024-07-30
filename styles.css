@@ -49,26 +49,32 @@ main {
     padding: 2rem;
 }
 
-/* Conteneur des sections */
-#filter {
-    padding: 10px;
-    background-color: transparent; /* Enlève le fond */
-    border: none; /* Enlève la bordure */
-    box-shadow: none; /* Enlève l'ombre */
+/* Conteneur des sections Filter by Country et Available Places */
+#filter-container {
+    display: flex;
+    flex-direction: column; /* Colonne pour aligner les éléments */
+    align-items: center; /* Centre horizontalement les éléments */
     margin-bottom: 20px; /* Marge inférieure pour l'espace entre les sections */
 }
 
-/* Alignement des sections Filter by Country et Available Places */
-#filter-container {
-    display: flex;
-    align-items: center; /* Aligne verticalement les éléments */
-    justify-content: space-between; /* Espacement entre les éléments */
+/* Titre des lieux disponibles */
+#available-places {
+    margin-bottom: 10px; /* Espace entre le titre et le filtre */
+    font-size: 2rem; /* Taille du texte */
 }
 
-/* Style du titre et du sélecteur de pays */
-#filter h2 {
-    font-size: 1rem; /* Taille réduite pour le titre */
-    margin-right: 10px; /* Espace entre le titre et le sélecteur */
+/* Style du filtre */
+#filter {
+    display: flex;
+    align-items: center; /* Aligne le texte et le sélecteur verticalement */
+    gap: 10px; /* Espace entre le texte et le sélecteur */
+    background-color: transparent; /* Enlève le fond */
+    border: none; /* Enlève la bordure */
+    box-shadow: none; /* Enlève l'ombre */
+}
+
+#filter label {
+    font-size: 1rem; /* Taille du texte du label */
 }
 
 #country-filter {
@@ -135,91 +141,5 @@ footer {
     background-color: #333;
     color: #fff;
     margin-top: 20px;
-}
-
-/* Détails de l'endroit */
-.place-details {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.place-details .place-image-large {
-    width: 100%;
-    border-radius: 10px;
-    height: auto;
-}
-
-.place-info p {
-    margin: 10px 0;
-}
-
-/* Avis */
-.reviews {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.review-card {
-    margin: 20px 0;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-}
-
-.review-card p {
-    margin: 5px 0;
-}
-
-.review-rating {
-    color: #FFD700;
-}
-
-.review-rating .fas {
-    font-size: 1.2rem;
-}
-
-/* Formulaire d'avis */
-.add-review {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-#review-form {
-    display: flex;
-    flex-direction: column;
-}
-
-#review-form textarea, #review-form select {
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-#review-form button {
-    padding: 10px;
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#review-form button:hover {
-    background-color: #0056b3;
 }
 
