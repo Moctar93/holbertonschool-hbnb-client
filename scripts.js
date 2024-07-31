@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Fetch login credentials
     async function loginUser(email, password) {
-        return fetch('https://your-api-url/login', {
+        return fetch('https://localhost/5000/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
