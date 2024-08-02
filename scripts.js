@@ -21,11 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const token = getCookie('token');
 
         if (!token) {
-            loginLink.style.display = 'block';
+            window.location.href = 'index.html';
         } else {
             loginLink.style.display = 'none';
-            if (placesList) fetchPlaces(token);
-            if (placeDetailsSection) fetchPlaceDetails(token, getPlaceIdFromURL());
+            return token;
         }
     }
 
@@ -175,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const reviewText = document.getElementById('review-text').value;
             const reviewRating = document.getElementById('review-rating').value;
             const placeId = getPlaceIdFromURL();
-            const token = getCookie('token');
+            const token = checkAuthentication();
 
             try {
                 const response = await fetch(`https://localhost/5000/places/${placeId}/reviews`, {
@@ -188,13 +187,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 if (response.ok) {
-                    // Optionally refresh the page or update the reviews list
+                    alert('Review submitted successfully!');
+                    addReviewForm.reset();
                     fetchPlaceDetails(token, placeId);
                 } else {
                     const errorData = await response.json();
-                    console.error(`Failed to add review: ${errorData.message || response.statusText}`);
+                    alert(`Failed to submit review: ${errorData.message || response.statusText}`);
                 }
             } catch (error) {
+                alert('Error adding review. Please try again.');
                 console.error('Error adding review:', error);
             }
         });
